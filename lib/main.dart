@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_v2_v1_kh/basic.dart';
 
+import 'functions.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -16,7 +18,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Basic(),
+      //home: const Basic(),
+      home: const Functions(),
     );
   }
 }
