@@ -75,6 +75,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+  fonts:
+    - family: khmer-mef2
+      fonts:
+        - asset: fonts/Khmer MEF2 Regular.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:
