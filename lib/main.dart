@@ -13,6 +13,7 @@ import 'columns.dart';
 import 'containers.dart';
 import 'functions.dart';
 import 'list_view.dart';
+import 'list_view_builder.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //home: const Basic(),
-      home:  ListViews(),
+      home:  ListViewBuilder(),
     );
   }
 }
