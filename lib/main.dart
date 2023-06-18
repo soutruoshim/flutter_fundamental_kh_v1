@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_v2_v1_kh/appbar_body_bottom.dart';
 import 'package:flutter_v2_v1_kh/basic.dart';
 import 'package:flutter_v2_v1_kh/classes.dart';
+import 'package:flutter_v2_v1_kh/grid_view.dart';
 import 'package:flutter_v2_v1_kh/simple_scaffold.dart';
 import 'package:flutter_v2_v1_kh/single_child_scrollview.dart';
 import 'package:flutter_v2_v1_kh/stacks.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //home: const Basic(),
-      home:  ListViewBuilder(),
+      home:  GridViews(),
     );
   }
 }
