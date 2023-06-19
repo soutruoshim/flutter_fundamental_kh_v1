@@ -13,6 +13,7 @@ import 'package:flutter_v2_v1_kh/text_font_icon_image.dart';
 import 'collections.dart';
 import 'columns.dart';
 import 'containers.dart';
+import 'custom_scroll.dart';
 import 'functions.dart';
 import 'list_view.dart';
 import 'list_view_builder.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //home: const Basic(),
-      home:  PageViews(),
+      home:  CustomScrollViews(),
     );
   }
 }
