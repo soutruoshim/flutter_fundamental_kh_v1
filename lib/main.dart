@@ -10,6 +10,7 @@ import 'package:flutter_v2_v1_kh/stacks.dart';
 import 'package:flutter_v2_v1_kh/statefullwidget.dart';
 import 'package:flutter_v2_v1_kh/text_font_icon_image.dart';
 
+import 'bottom_navigation_bar.dart';
 import 'collections.dart';
 import 'columns.dart';
 import 'containers.dart';
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //home: const Basic(),
-      home:  CustomScrollViews(),
+      home:  MyBottomNavigationBar(),
     );
   }
 }
