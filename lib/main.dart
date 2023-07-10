@@ -9,6 +9,9 @@ import 'package:flutter_v2_v1_kh/v1/single_child_scrollview.dart';
 import 'package:flutter_v2_v1_kh/v1/stacks.dart';
 import 'package:flutter_v2_v1_kh/v1/statefullwidget.dart';
 import 'package:flutter_v2_v1_kh/v1/text_font_icon_image.dart';
+import 'package:flutter_v2_v1_kh/v2/asynchronous.dart';
+import 'package:flutter_v2_v1_kh/v2/asynchronous_futurebuilder.dart';
+import 'package:flutter_v2_v1_kh/v2/asynchronous_futurebuilder_api.dart';
 
 import 'v1/collections.dart';
 import 'v1/columns.dart';
@@ -33,7 +36,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //home: const Basic(),
-      home:  MyAppMultiProviderProxy(),
+      home:  AsynchronousFutureBuilderApi(),
     );
   }
 }
