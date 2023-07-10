@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_v2_v1_kh/list_view_builder.dart';
+import 'list_view_builder.dart';
 class PageDetailListview extends StatelessWidget {
   Fruit fruit;
   PageDetailListview({super.key, required this.fruit});

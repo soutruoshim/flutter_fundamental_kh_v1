@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_v2_v1_kh/providers/logic/counter_model.dart';
 import 'package:provider/provider.dart';
+
+import 'logic/counter_model.dart';
 
 class MyScreen extends StatelessWidget {
   const MyScreen({super.key});

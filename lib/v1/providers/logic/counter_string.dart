@@ -1,4 +1,5 @@
-import 'package:flutter_v2_v1_kh/providers/logic/counter_model.dart';
+
+import 'counter_model.dart';
 
 class CounterStringModel{
    CounterModel counterModel;

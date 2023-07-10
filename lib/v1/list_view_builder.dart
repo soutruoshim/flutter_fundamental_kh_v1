@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_v2_v1_kh/page_detail_listview.dart';
+import 'package:flutter_v2_v1_kh/v1/page_detail_listview.dart';
 class ListViewBuilder extends StatelessWidget {
   const ListViewBuilder({super.key});
 

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_v2_v1_kh/providers/logic/counter_model.dart';
-import 'package:flutter_v2_v1_kh/providers/logic/counter_string.dart';
-import 'package:flutter_v2_v1_kh/providers/logic/theme_model.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
+
+import 'logic/counter_model.dart';
+import 'logic/counter_string.dart';
 
 class MyAppMultiProviderProxy extends StatelessWidget {
   final List<SingleChildWidget> _provider = [
