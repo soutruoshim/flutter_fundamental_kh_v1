@@ -12,6 +12,7 @@ import 'package:flutter_v2_v1_kh/v1/text_font_icon_image.dart';
 import 'package:flutter_v2_v1_kh/v2/asynchronous.dart';
 import 'package:flutter_v2_v1_kh/v2/asynchronous_futurebuilder.dart';
 import 'package:flutter_v2_v1_kh/v2/asynchronous_futurebuilder_api.dart';
+import 'package:flutter_v2_v1_kh/v2/files_shareref_securi/file_page.dart';
 import 'package:flutter_v2_v1_kh/v2/storages/storages.dart';
 
 import 'v1/collections.dart';
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //home: const Basic(),
-      home:  Storages(),
+      home:  FilePage(),
     );
   }
 }

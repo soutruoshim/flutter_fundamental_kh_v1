@@ -41,6 +41,9 @@ dependencies:
   compute: ^1.0.2
   sqflite: ^2.2.8+4
   path: ^1.8.2
+  path_provider: ^2.0.15
+  shared_preferences: ^2.2.0
+  flutter_secure_storage: ^8.0.0
 
 dev_dependencies:
   flutter_test:
