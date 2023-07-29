@@ -2,7 +2,8 @@ import 'dart:core';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_v2_v1_kh/v2/storages/insert_page.dart';
+import 'package:flutter_v2_v1_kh/v2/firebase/update_page_firebase.dart';
+import 'insert_page_firebase.dart';
 import 'record_model.dart';
 
 class FirebaseHomePage extends StatefulWidget {
@@ -33,7 +34,7 @@ class _FirebaseHomePageState extends State<FirebaseHomePage> {
     return AppBar(
       title: Text("Firebase"),
       actions: [IconButton(onPressed: () async {
-        await Navigator.of(context).push(MaterialPageRoute(builder: (context) => InsertPage()));
+        await Navigator.of(context).push(MaterialPageRoute(builder: (context) => InsertPageFirebase()));
       }, icon: Icon(Icons.add))],
     );
   }
@@ -48,7 +49,10 @@ class _FirebaseHomePageState extends State<FirebaseHomePage> {
 
   Widget _buildFuture() {
     return StreamBuilder<QuerySnapshot>(
-      stream: FirebaseFirestore.instance.collection("baby").snapshots(),
+      stream: FirebaseFirestore.instance.collection("baby")
+          // .where('name', arrayContains: 'sok')
+          // .orderBy('name', descending: true)
+          .snapshots(),
       builder: (index, snapshot) {
         if (snapshot.hasError) {
           return Center(child: Text("Firebase Error: ${snapshot.error}"));
@@ -70,16 +74,27 @@ class _FirebaseHomePageState extends State<FirebaseHomePage> {
     );
   }
   Widget _buildListViewItem(itemAtIndex){
-    return Card(
-      child: ListTile(
-        title: Text("${itemAtIndex.name}"),
-        subtitle: Text("${itemAtIndex.votes}"),
-        trailing: IconButton(
-          icon: Icon(Icons.delete_forever),
-          onPressed: (){
-          },
+    return InkWell(
+      onTap: ()async {
+        await Navigator.of(context).push(MaterialPageRoute(builder: (context) => UpdatePageFirebase(record: itemAtIndex,)));
+      },
+      child: Card(
+        child: ListTile(
+          title: Text("${itemAtIndex.name}"),
+          subtitle: Text("${itemAtIndex.votes}"),
+          trailing: IconButton(
+            icon: Icon(Icons.delete_forever),
+            onPressed: ()async {
+              await deleteRecord(itemAtIndex);
+            },
+          ),
         ),
       ),
     );
+  }
+  Future deleteRecord(Record record){
+    return FirebaseFirestore.instance.runTransaction((trx) async{
+      trx.delete(record.reference!);
+    }).then((value)=>print("deleted"));
   }
 }
