@@ -15,6 +15,7 @@ import 'package:flutter_v2_v1_kh/v2/asynchronous_futurebuilder.dart';
 import 'package:flutter_v2_v1_kh/v2/asynchronous_futurebuilder_api.dart';
 import 'package:flutter_v2_v1_kh/v2/files_shareref_securi/file_page.dart';
 import 'package:flutter_v2_v1_kh/v2/firebase/home.dart';
+import 'package:flutter_v2_v1_kh/v2/firebase_auth_email/home_auth.dart';
 import 'package:flutter_v2_v1_kh/v2/storages/storages.dart';
 
 import 'v1/collections.dart';
@@ -54,7 +55,7 @@ class MyApp extends StatelessWidget {
           );
         }
         if (snapshot.connectionState == ConnectionState.done) {
-          return _buildMaterial(FirebaseHomePage());
+          return _buildMaterial(FirebaseAuthHomePage());
         } else {
           return _buildMaterial(Center(
             child: Scaffold(body: CircularProgressIndicator()),
